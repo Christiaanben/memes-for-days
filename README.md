@@ -1,4 +1,4 @@
-# memesForDays
+# memes-for-days
 
 Make a small single page Vuejs application (similar to the sample), with the following features: 
 
@@ -7,3 +7,26 @@ Make a small single page Vuejs application (similar to the sample), with the fol
 - Add/edit/delete meme entry functionality
 - Some global styling 
 - And upload it to your github.
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
