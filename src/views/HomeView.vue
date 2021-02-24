@@ -1,6 +1,8 @@
 <template>
 <div>
-  <h1 class="text-h3 mt-3">My favourite memes</h1>
+  <h1 class="text-h3 my-3 text-capitalize grey--text text--darken-3">
+    My favourite memes
+  </h1>
   <meme-form />
   <meme-list />
 </div>

@@ -23,6 +23,7 @@
         />
       </validation-provider>
       <v-btn
+          color="primary"
           :disabled="invalid"
           @click="addMeme"
       >
