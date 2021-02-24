@@ -28,29 +28,31 @@
       <v-spacer></v-spacer>
 
       <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        href="https://github.com/Christiaanben/memes-for-days"
         target="_blank"
         text
       >
-        <span class="mr-2">Latest Release</span>
+        <span class="mr-2">Github source</span>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
 
-    <v-main>
-      <HelloWorld/>
+    <v-main class="d-flex">
+      <v-layout justify-center>
+        <home-view class="justify-center"/>
+      </v-layout>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import HomeView from '@/views/HomeView'
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    HomeView,
   },
 
   data: () => ({
