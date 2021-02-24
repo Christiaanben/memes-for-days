@@ -45,18 +45,14 @@
   </v-app>
 </template>
 
-<script>
-import HomeView from '@/views/HomeView'
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+import HomeView from './views/HomeView.vue'
 
-export default {
-  name: 'App',
-
+@Component({
   components: {
     HomeView,
   },
-
-  data: () => ({
-    //
-  }),
-};
+})
+export default class App extends Vue {}
 </script>
