@@ -5,6 +5,7 @@ import store from './store'
 import './plugins/vee-validate'
 
 Vue.config.productionTip = false
+require('./assets/css/main.scss');
 
 new Vue({
   el: '#app',

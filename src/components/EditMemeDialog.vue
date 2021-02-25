@@ -12,19 +12,19 @@
         </v-card-title>
         <v-form class="ma-4">
           <v-img
-              :src="value.image"
+              :src="editedItem.image"
               class="rounded"
           />
           <validation-provider rules="required" v-slot="{ errors }">
             <v-text-field
                 label="Meme title"
-                v-model="value.title"
+                v-model="editedItem.title"
                 :error-messages="errors"
             />
           </validation-provider>
           <validation-provider rules="required" v-slot="{ errors }">
             <v-text-field
-                v-model="value.description"
+                v-model="editedItem.description"
                 label="Reason this is funny"
                 :error-messages="errors"
             />
@@ -64,12 +64,26 @@ export default {
   components: {},
   props: {
     value: {
-      type: Meme,
+      type: Object,
       default: null,
     },
   },
+  data: () => ({
+    editedItem: new Meme(),
+  }),
+  watch: {
+    value(newValue) {
+      if (newValue !== null) {
+        this.editedItem = new Meme(JSON.parse(JSON.stringify(newValue)))
+      }
+    }
+  },
   methods: {
     save () {
+      this.$store.commit('SET_MEME', {
+        newMeme: this.editedItem,
+        oldMeme: this.value
+      })
       this.$emit('input', null)
     },
   },

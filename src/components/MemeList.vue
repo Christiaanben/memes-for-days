@@ -46,10 +46,10 @@ name: "MemeList",
   components: { EditMemeDialog, DeleteDialog },
   data: () => ({
     headers: [
-      {text: 'Meme', value: 'meme'},
-      {text: 'Title', value: 'title'},
-      {text: 'Reason this is funny', value: 'description'},
-      {text: 'Actions', value: 'actions'}
+      {text: 'Meme', value: 'meme', width: 80},
+      {text: 'Title', value: 'title', width: 80},
+      {text: 'Reason this is funny', value: 'description', width: 200},
+      {text: 'Actions', value: 'actions', width: 80}
     ],
     deleteTarget: null,
     editTarget: null,
